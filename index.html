@@ -10,8 +10,9 @@
     <script type="text/jsx">
       const app = document.getElementById('app');
 
-      function Header() {
-        return <h1>Develop. Preview. Ship. 🚀</h1>;
+      function Header({ title }) {
+        console.log(title);
+        return <h1>{title}</h1>;
       }
 
       function Article() {
@@ -21,10 +22,10 @@
       function HomePage() {
         return <div>
           {/* Nesting the Header component */}
-          <Header />
+          <Header title='React 💙'/>
           {/* Nesting the Article component */}
           <Article />
-        </div>;
+        </div>;   
       }
 
       ReactDOM.render(<HomePage />, app);
